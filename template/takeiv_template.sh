@@ -1,6 +1,6 @@
 # iv_curve template script
 # Usage: ./takeiv_template.sh [temperature in mK] [datamode] [run number] [show plots (0/1)]
-# Example: ./takeiv_template.sh 300 1 1 1
+# Example: ./takeiv_template.sh 250 1 1 1
 temp=${1:-250} # temperature for reference in mK
 datamode=${2:-1} # usually only uses 0, 1 and 10 
 runN=${3:-1} # suffix run number, or string
