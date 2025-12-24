@@ -55,7 +55,6 @@ def main():
 	bias_final = args.bias_final
 	data_mode = args.data_mode
 
-	#m = MCE()
 	m = MCEWrap()
 
 	mas_data = os.environ['MAS_DATA']
@@ -133,6 +132,7 @@ def main():
 
 	biasf.close()
 	b.close()
+	
 	t0 = time.time()
 	print "executing bias ramp"
 	if not DEBUG:
@@ -143,7 +143,7 @@ def main():
 	m.write('tes','bias',bias_mask*bias_final)
 	m.write('rca','flx_lp_init',1)
 
-	
+
 
 if __name__=='__main__':
 	main()
