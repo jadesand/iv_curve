@@ -41,6 +41,8 @@ def main():
       fn_s = os.path.join(dname,'iv_col%02d_row%02d.png'%(col,row))
       #plt.ylim(-20000,45000)
       #plt.ylim(2900, 3100)
+      plt.xlabel('Bias Current (arbitrary units)')
+      plt.ylabel('SQ1FB (arbitrary units)')
       plt.grid()
       plt.savefig(fn_s)
       
