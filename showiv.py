@@ -21,7 +21,6 @@ def main():
   f = mce_data.MCEFile(fn)
   dname = os.path.split(fn)[0]
   bias = np.loadtxt(biasfn,skiprows=1)
-  #y = -1.0*f.Read(unfilter='DC').data
   y = -1.0*f.Read(row_col=True,unfilter='DC').data  
   
   nr,nc,nt = y.shape
