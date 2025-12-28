@@ -104,12 +104,13 @@ def main():
 	biasf = open(biasfile,'w')
 	print>>biasf,"<tes_bias>"
 
-	print "zapping"
+    # preparation
+	print "zapping" # zap: to transport instantaneously
 	zap_arr = bias_mask * zap_bias
 	bias_start_arr = bias_mask * bias_start
 	m.write('tes','bias',zap_arr)
 	time.sleep(zap_time)
-	print "settling"
+	print "settling" # settle: to come to rest
 	m.write('tes','bias',bias_mask*settle_bias)
 	time.sleep(settle_time)
 
