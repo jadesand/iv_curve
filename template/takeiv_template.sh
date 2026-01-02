@@ -7,7 +7,7 @@ runN=${3:-1} # suffix run number, or string
 show=${4:-0}
 
 # Change lcname every time you run something
-lcname="LC_light_FPU_"$temp"mK_datamode"$datamode"_run"$runN
+lcname="LC_FPU_"$temp"mK_datamode"$datamode"_run"$runN
 lcfullpath="/data/cryo/current_data/"$lcname
 lcplots=$lcfullpath"/"
 
@@ -15,16 +15,16 @@ lcplots=$lcfullpath"/"
 ./ivcurve.py \
   --dataname $lcname \
   --columns 0 4\
-  --bias_start 65535 \
-  --bias_step -32 \
-  --bias_count 2049 \
+  --bias_start 30000 \
+  --bias_step -300 \
+  --bias_count 100 \
   --bias_pause 0.02 \
   --bias_final 0 \
   --data_mode $datamode \
   --zap_bias 65535 \
-  --zap_time 10 \
-  --settle_time 5.0 \
+  --zap_time 5 \
   --settle_bias 65535 \
+  --settle_time 30 \
 #  --cooling_time 3600 \
 #  --temp $temp
 #  --runN $runN
